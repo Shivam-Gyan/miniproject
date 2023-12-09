@@ -14,7 +14,7 @@
     padding: 0;
     font-family: 'Manrope', sans-serif;
     text-decoration: none;
-
+    box-sizing: border-box;
 }
 
 
@@ -47,6 +47,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #0000003a;
     padding: 10px;
     border-bottom: 1px solid #dadada;
 
@@ -136,14 +137,14 @@ i {
 
 .left-home {
     padding: 80px;
-    width: 50%;
+    width: 100%;
     z-index: 20;
     /* mix-blend-mode: difference; */
 }
 
 .left-home p {
     color: var(--textcol);
-    width: 70%;
+    width: 100%;
     font-weight: lighter;
     font-size: 3.3vmax;
     margin-left: 60px;
@@ -158,7 +159,7 @@ i {
     text-align: center;
     background-color: var(--pricol);
     padding: 8px;
-    width: 200px;
+    width: 250px;
     margin-left: 60px;
     border-radius: 20px;
     box-shadow: 0 1px 5px;
@@ -208,6 +209,7 @@ i {
     display: flex;
     flex-direction: column;
     position: relative;
+    text-align: center;
 
 }
 
@@ -241,7 +243,7 @@ i {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    width: 40%;
+    width: 100%;
 }
 
 .right-about h1 {
@@ -255,6 +257,7 @@ i {
 
 .bottom-about {
     margin-top: 40px;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -271,7 +274,7 @@ i {
     text-align: center;
     background-color: var(--pricol);
     padding: 8px;
-    width: 200px;
+    width: 250px;
     margin-left: 60px;
     border-radius: 20px;
     box-shadow: 0 1px 5px;
@@ -291,6 +294,7 @@ i {
 .steps {
     margin-top: 4vh;
     margin-bottom: 3vh;
+    width: 100%;
     background-color: #ece8e6;
     padding: 6vh;
     /* height: 20vh; */
@@ -304,9 +308,12 @@ i {
 }
 
 .steps-card {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-column-gap: 37px;
+    height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+   gap: 20px;
 }
 
 .card {
@@ -314,14 +321,24 @@ i {
     padding: 10px;
     border: 2px solid #dadada;
     display: flex;
+    height: 180px;
+    width: 250px;
     align-items: center;
     flex-direction: column;
-    width: 100%;
+    position: relative;
+    overflow: hidden;
 }
 
 .card h1 {
-    color: #ce9caa;
-    font-size: 2.3rem;
+    position:absolute;
+    top: -30px;
+    right: 0px;
+    color: #9b3e584f;
+    font-size: 75px;
+}  
+.card p{
+    position: absolute;
+    top: 12vh;
 }
 
 
@@ -333,8 +350,6 @@ i {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 1px solid #dadada;
-    /* background-color: red; */
 
 }
 
@@ -346,18 +361,12 @@ i {
     border: 2px solid #dadada;
 }
 
-/* #form-container h2 {
-    border-bottom: 2px solid #dadada;
-} */
-
 form {
     display: flex;
     flex-direction: column;
-    /* gap: 10px; */
 }
 
 .input {
-    /* border-radius: 20px; */
     border-bottom: 2px solid blue;
     border-left: 0px;
     border-right: 0px;
@@ -388,12 +397,13 @@ form #button:hover {
 }
 
 .info {
+    width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     flex-direction: column;
     gap: 5vh;
-    padding: 10vh 4vw;
+    padding: 10vh;
     background-color: #fcf8f6;
 
 }
@@ -409,7 +419,7 @@ form #button:hover {
     border: 2px solid #dadada ;
     display: flex;
     height: 150px;
-    width: 200px;
+    width: 250px;
     padding: 10px;
 
 }
@@ -420,4 +430,33 @@ form #button:hover {
 }
 .content h3{
     color: #9c3453;
+    margin-bottom: 10px;
+}
+
+
+
+/* --------------------------footer Section ------------------- */
+footer{
+    background-color: #002233;
+    padding: 40px 40px;
+    color: #fff;
+    text-align: center;
+}
+footer h5{
+    margin: 20px 0;
+}
+.contact-nav {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap:10px;
+    /* margin: 10px 30px 0px 0px; */
+
+}
+footer div{
+    display: block;
+}
+.contact-nav a i{
+color: #fff;
+
 }
